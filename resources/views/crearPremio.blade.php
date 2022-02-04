@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                     @isset($premio)
-                        <form enctype="multipart/form-data" action="{{ url('modificar') }}" method="post">
+                        <form enctype="multipart/form-data" action="{{ url('modificar/'.$premio->id)}}" method="post">
                         @csrf
                             <x-label for="titulo">Titulo del comic:</x-label>
                             <x-input type="text" id="titulo" name="titulo" value="{{$premio->comic}}"></x-input>
